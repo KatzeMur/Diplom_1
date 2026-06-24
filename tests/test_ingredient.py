@@ -1,12 +1,10 @@
 import pytest
 from praktikum.ingredient import Ingredient
+from tests.test_data import INGREDIENT_TYPE, INGREDIENT_NAME, INGREDIENT_PRICE
 
-@pytest.fixture
-def default_ingredient():
-    return Ingredient("SAUCE", "Hot sauce", 50.0)
 
 @pytest.mark.parametrize("ing_type, name, price", [
-    ("SAUCE", "Hot sauce", 50.0),
+    (INGREDIENT_TYPE, INGREDIENT_NAME, INGREDIENT_PRICE),
     ("FILLING", "Meat", 150.0),
 ])
 def test_ingredient_creation(ing_type, name, price):
@@ -14,7 +12,8 @@ def test_ingredient_creation(ing_type, name, price):
     assert ingredient.get_type() == ing_type
 
 def test_ingredient_get_name(default_ingredient):
-    assert default_ingredient.get_name() == "Hot sauce"
+    assert default_ingredient.get_name() == INGREDIENT_NAME
 
 def test_ingredient_get_price(default_ingredient):
-    assert default_ingredient.get_price() == 50.0
+    assert default_ingredient.get_price() == INGREDIENT_PRICE
+    
