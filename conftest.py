@@ -1,7 +1,7 @@
 import pytest
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
-from tests.test_data import BUN_NAME, BUN_PRICE, INGREDIENT_TYPE, INGREDIENT_NAME, INGREDIENT_PRICE
+from data import BUN_NAME, BUN_PRICE, INGREDIENT_TYPE, INGREDIENT_NAME, INGREDIENT_PRICE
 
 
 @pytest.fixture

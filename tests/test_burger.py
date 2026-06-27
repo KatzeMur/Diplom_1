@@ -1,6 +1,7 @@
 import pytest
 from praktikum.burger import Burger
-from tests.test_data import EXPECTED_RECEIPT
+from praktikum.ingredient import Ingredient
+from data import EXPECTED_RECEIPT
 
 
 def test_set_buns(burger, test_bun):
@@ -28,7 +29,6 @@ def test_remove_ingredient(burger, test_ingredient):
 
 
 def test_move_ingredient(burger, test_ingredient):
-    from praktikum.ingredient import Ingredient
     ing1 = Ingredient("FILLING", "Meat", 100.0)
     ing2 = Ingredient("FILLING", "Cheese", 80.0)
     burger.add_ingredient(ing1)

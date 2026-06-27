@@ -1,5 +1,5 @@
 from praktikum.bun import Bun
-from tests.test_data import BUN_NAME, BUN_PRICE
+from data import BUN_NAME, BUN_PRICE
 
 
 def test_bun_get_name():
